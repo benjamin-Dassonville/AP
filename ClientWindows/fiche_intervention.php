@@ -339,6 +339,12 @@ if (isset($_POST['client_id']) || ($intervention && $intervention['client_id']))
                                class="btn btn-sm btn-outline">
                                 ← Retour
                             </a>
+                            <a href="generer_pdf_intervention.php?id=<?= $intervention['id'] ?>" 
+                               class="btn btn-sm btn-secondary" 
+                               title="Télécharger la fiche d'intervention en PDF"
+                               target="_blank">
+                                📄 Télécharger PDF
+                            </a>
                             <?php if ($user_role === 'gestionnaire'): ?>
                                 <a href="?action=edit&id=<?= $intervention['id'] ?>" class="btn btn-sm btn-primary">
                                     Modifier
@@ -632,6 +638,12 @@ if (isset($_POST['client_id']) || ($intervention && $intervention['client_id']))
                                             <td>
                                                 <a href="?action=view&id=<?= $interv['id'] ?>" class="btn btn-sm btn-outline">
                                                     Voir
+                                                </a>
+                                                <a href="generer_pdf_intervention.php?id=<?= $interv['id'] ?>" 
+                                                   class="btn btn-sm btn-outline" 
+                                                   title="Télécharger PDF"
+                                                   target="_blank">
+                                                    📄
                                                 </a>
                                                 <?php if ($user_role === 'gestionnaire'): ?>
                                                     <a href="?action=edit&id=<?= $interv['id'] ?>" class="btn btn-sm btn-primary">

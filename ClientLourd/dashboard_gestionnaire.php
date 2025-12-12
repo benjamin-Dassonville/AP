@@ -216,6 +216,12 @@ function getPrioriteBadge($priorite) {
                                             <a href="fiche_intervention.php?id=<?= $intervention['id'] ?>" class="btn btn-sm btn-outline">
                                                 Voir
                                             </a>
+                                            <a href="generer_pdf_intervention.php?id=<?= $intervention['id'] ?>" 
+                                               class="btn btn-sm btn-outline" 
+                                               title="Télécharger PDF"
+                                               target="_blank">
+                                                📄
+                                            </a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
