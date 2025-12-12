@@ -1,0 +1,80 @@
+{
+    "name": "cashcash-client-lourd",
+    "version": "1.0.0",
+    "description": "CashCash - Application client lourd de gestion",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder",
+        "build:win": "electron-builder --win",
+        "build:mac": "electron-builder --mac",
+        "build:linux": "electron-builder --linux"
+    },
+    "keywords": [
+        "electron",
+        "desktop",
+        "php",
+        "interventions",
+        "IT"
+    ],
+    "author": "AP Test",
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1"
+    },
+    "build": {
+        "appId": "com.cashcash.clientlourd",
+        "productName": "CashCash",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "**/*",
+            "!node_modules/**/*",
+            "!dist/**/*",
+            "!.git/**/*"
+        ],
+        "asarUnpack": [
+            "**/*.php",
+            "assets/**/*",
+            "api/**/*",
+            "components/**/*",
+            "migrations/**/*",
+            "vendor/**/*",
+            "*.sql",
+            "*.md"
+        ],
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "icon": "assets/icon.png",
+            "publisherName": "CashCash"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "shortcutName": "CashCash",
+            "installerIcon": "assets/icon.png",
+            "uninstallerIcon": "assets/icon.png",
+            "license": "LICENSE.txt",
+            "language": "1036"
+        },
+        "mac": {
+            "target": "dmg",
+            "icon": "assets/icon.png"
+        },
+        "linux": {
+            "target": "AppImage",
+            "icon": "assets/icon.png"
+        }
+    }
+}
