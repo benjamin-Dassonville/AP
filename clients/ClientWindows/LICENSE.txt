@@ -1,0 +1,11 @@
+CashCash - Application de Gestion IT
+Copyright (c) 2024
+
+Cette application est fournie "telle quelle", sans garantie d'aucune sorte.
+
+Conditions d'utilisation :
+- L'application nécessite XAMPP installé sur Windows (avec PHP et MySQL)
+- L'application est destinée à un usage professionnel interne
+- Toute modification ou redistribution doit être autorisée
+
+Pour toute question ou support, contactez l'administrateur système.
