@@ -1,2 +1,19 @@
-ClientLourd/vendor/tcpdf
-vendor/tcpdf
+# PHP / Composer dependencies
+vendor/
+composer.lock
+
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

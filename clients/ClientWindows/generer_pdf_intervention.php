@@ -72,8 +72,8 @@ try {
     die('Erreur: ' . $e->getMessage());
 }
 
-// Chargement de TCPDF
-require_once('vendor/tcpdf/tcpdf.php');
+// Chargement de TCPDF via Composer
+require_once(__DIR__ . '/vendor/autoload.php');
 
 // Création d'une classe personnalisée pour l'en-tête et le pied de page
 class InterventionPDF extends TCPDF {
