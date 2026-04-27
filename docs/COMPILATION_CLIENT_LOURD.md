@@ -8,7 +8,7 @@
 ## 📁 Structure du projet client lourd
 
 ```
-clients/ClientLourd/
+clients/client/
 ├── main.js                 # Point d'entrée Electron
 ├── php-server.js           # Serveur PHP built-in intégré
 ├── preload.js              # Script preload Electron (CSP)
@@ -52,7 +52,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
 ```bash
 git clone https://github.com/benjamin-Dassonville/AP.git
-cd "AP test 2/clients/ClientLourd"
+cd "AP test 2/clients/client"
 ```
 
 ---
@@ -63,7 +63,7 @@ cd "AP test 2/clients/ClientLourd"
 > Il faut le régénérer à chaque clone :
 
 ```bash
-# Depuis clients/ClientLourd/
+# Depuis clients/client/
 composer install
 ```
 
