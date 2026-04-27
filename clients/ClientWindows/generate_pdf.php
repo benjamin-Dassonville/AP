@@ -8,12 +8,9 @@ require_once 'auth.php';
 requireRole('gestionnaire');
 require_once __DIR__ . '/utils.php';
 
-// Path to TCPDF library – adjust if needed
-$tcpdfPath = __DIR__ . '/vendor/tcpdf/tcpdf.php';
-if (!file_exists($tcpdfPath)) {
-    die('TCPDF library not found. Please install it in vendor/tcpdf.');
-}
-require_once $tcpdfPath;
+// Chargement de TCPDF via Composer
+require_once __DIR__ . '/vendor/autoload.php';
+
 
 // Fetch contracts expiring within 60 days
 $stmt = $pdo->prepare(
