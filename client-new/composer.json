@@ -1,0 +1,12 @@
+{
+    "name": "cashcash/client-lourd",
+    "description": "CashCash - Application client lourd de gestion des interventions IT",
+    "type": "project",
+    "require": {
+        "tecnickcom/tcpdf": "^6.7"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "vendor-dir": "vendor"
+    }
+}

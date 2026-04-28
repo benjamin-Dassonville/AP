@@ -1,0 +1,77 @@
+{
+    "name": "cashcash-client",
+    "version": "1.0.0",
+    "description": "CashCash - Application client lourd de gestion des interventions IT",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder",
+        "build:win": "electron-builder --win",
+        "build:mac": "electron-builder --mac",
+        "build:linux": "electron-builder --linux"
+    },
+    "keywords": [
+        "electron",
+        "desktop",
+        "php",
+        "interventions",
+        "IT"
+    ],
+    "author": "AP Test",
+    "license": "ISC",
+    "devDependencies": {
+        "dmg-license": "^1.0.11",
+        "electron": "^28.3.3",
+        "electron-builder": "^24.9.1"
+    },
+    "build": {
+        "appId": "com.cashcash.client",
+        "productName": "CashCash",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "**/*",
+            "!node_modules/**/*",
+            "!dist/**/*",
+            "!.git/**/*"
+        ],
+        "asarUnpack": [
+            "public/**/*",
+            "src/**/*",
+            "php-portable/**/*",
+            "components/**/*",
+            "migrations/**/*",
+            "vendor/**/*",
+            "*.sql",
+            "*.md",
+            "*.php"
+        ],
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "publisherName": "CashCash"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "shortcutName": "CashCash",
+            "license": "LICENSE.txt",
+            "language": "1036"
+        },
+        "mac": {
+            "target": "dmg"
+        },
+        "linux": {
+            "target": "AppImage"
+        }
+    }
+}
